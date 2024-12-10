@@ -1,101 +1,112 @@
-import Image from "next/image";
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
+import { Input } from "@/components/ui/input"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div>
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-2xl">
+          <h1 className="text-4xl font-medium mb-8">
+            A brand built on the love of craftmanship, quality and outstanding customer service
+          </h1>
+          <Button asChild>
+            <Link href="/products">View our products</Link>
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-8">
+        <div className="bg-[#2A254B] text-white p-12">
+          <h2 className="text-2xl mb-4">It started with a small idea</h2>
+          <p className="mb-8">
+            A global brand with local beginnings, our story began in a small studio in South London in early 2014
+          </p>
+          <Button variant="secondary">View collection</Button>
+        </div>
+        <div className="relative h-[400px]">
+        <Image
+            src="/assets/img4.png"
+            alt="Modern sofa"
+            fill
+            className="object-cover rounded-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative h-[500px]">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        src="/assets/image (2).png" // Corrected image path
+        alt="Modern sofa"
+        width={600} // Specified width
+        height={400} // Specified height
+        className="object-cover"
+      />
+          </div>
+          <div>
+            <h2 className="text-3xl mb-6">Our service isn&apos;t just personal. It&apos;s actually hyper personally exquisite</h2>
+            <p className="mb-4">
+              When we started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.
+            </p>
+            <p className="mb-8">
+              Handmade, and lovingly crafted furniture and homeware is what we live, breathe and design so our Chelsea boutique become the hotbed for the London interior design community.
+            </p>
+            <Button variant="outline">Get in touch</Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-16">
+        <h2 className="text-2xl text-center mb-12">What makes our brand different</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          <div className="text-center">
+            <h3 className="font-medium mb-2">Next day as standard</h3>
+            <p className="text-sm text-gray-600">
+              Order before 3pm and get your order the next day as standard
+            </p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-medium mb-2">Made by true artisans</h3>
+            <p className="text-sm text-gray-600">
+              Handmade crafted goods made with real passion and craftmanship
+            </p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-medium mb-2">Unbeatable prices</h3>
+            <p className="text-sm text-gray-600">
+              For our materials and quality you won&apos;t find better prices anywhere
+            </p>
+          </div>
+          <div className="text-center">
+            <h3 className="font-medium mb-2">Recycled packaging</h3>
+            <p className="text-sm text-gray-600">
+              We use 100% recycled to ensure our footprint is more manageable
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+  className="bg-cover bg-center py-16"
+  style={{ backgroundImage: "url('/assets/img5.png')" }}
+>
+  <div className="bg-gray-0 bg-opacity-0 p-8 container mx-auto px-4 text-center rounded-lg">
+ 
+    <h2 className="text-2xl mb-4">Join the club and get the benefits</h2>
+    <p className="mb-8">
+      Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more
+    </p>
+    <div className="max-w-md mx-auto flex gap-4">
+      <Input type="email" placeholder="your@email.com" />
+      <Button>Sign up</Button>
     </div>
-  );
+  </div>
+</section>
+
+    </div>
+  )
 }
+
