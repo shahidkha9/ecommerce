@@ -39,7 +39,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px]">
           <Image
-        src="/assets/image (2).png" // Corrected image path
+        src="/assets/img9.png" // Corrected image path
         alt="Modern sofa"
         width={600} // Specified width
         height={400} // Specified height
