@@ -39,12 +39,11 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px]">
           <Image
-        src="/assets/img9.png" // Corrected image path
-        alt="Modern sofa"
-        width={600} // Specified width
-        height={400} // Specified height
-        className="object-cover"
-      />
+            src="/assets/img9.png"
+            alt="Modern sofa"
+            fill
+            className="object-cover rounded-lg"
+          />
           </div>
           <div>
             <h2 className="text-3xl mb-6">Our service isn&apos;t just personal. It&apos;s actually hyper personally exquisite</h2>
